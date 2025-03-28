@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        input[type="range"] {
+            width: 70%;
+            height: 8px;
+            background: white;
+            border-radius: 5px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #ff4b5c;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        button {
+            background: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff1e42;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Wine Quality Prediction</h2>
+        <form action="/predict" method="post">
+            <div class="slider-container">
+                <label>Fixed Acidity:</label>
+                <input type="range" name="fixed_acidity" min="3" max="15" step="0.1" value="7" oninput="this.nextElementSibling.value=this.value">
+                <output>7</output>
+            </div>
+            <div class="slider-container">
+                <label>Volatile Acidity:</label>
+                <input type="range" name="volatile_acidity" min="0" max="2" step="0.01" value="0.5" oninput="this.nextElementSibling.value=this.value">
+                <output>0.5</output>
+            </div>
+            <div class="slider-container">
+                <label>Citric Acid:</label>
+                <input type="range" name="citric_acid" min="0" max="1" step="0.01" value="0.3" oninput="this.nextElementSibling.value=this.value">
+                <output>0.3</output>
+            </div>
+            <div class="slider-container">
+                <label>Residual Sugar:</label>
+                <input type="range" name="residual_sugar" min="0" max="15" step="0.1" value="2.5" oninput="this.nextElementSibling.value=this.value">
+                <output>2.5</output>
+            </div>
+            <div class="slider-container">
+                <label>Chlorides:</label>
+                <input type="range" name="chlorides" min="0" max="0.2" step="0.001" value="0.08" oninput="this.nextElementSibling.value=this.value">
+                <output>0.08</output>
+            </div>
+            <div class="slider-container">
+                <label>Free Sulfur Dioxide:</label>
+                <input type="range" name="free_sulfur_dioxide" min="0" max="100" step="1" value="30" oninput="this.nextElementSibling.value=this.value">
+                <output>30</output>
+            </div>
+            <div class="slider-container">
+                <label>Total Sulfur Dioxide:</label>
+                <input type="range" name="total_sulfur_dioxide" min="0" max="300" step="1" value="100" oninput="this.nextElementSibling.value=this.value">
+                <output>100</output>
+            </div>
+            <div class="slider-container">
+                <label>Density:</label>
+                <input type="range" name="density" min="0.98" max="1.005" step="0.0001" value="0.995" oninput="this.nextElementSibling.value=this.value">
+                <output>0.995</output>
+            </div>
+            <div class="slider-container">
+                <label>pH:</label>
+                <input type="range" name="pH" min="2.5" max="4.5" step="0.01" value="3.3" oninput="this.nextElementSibling.value=this.value">
+                <output>3.3</output>
+            </div>
+            <div class="slider-container">
+                <label>Sulphates:</label>
+                <input type="range" name="sulphates" min="0" max="2" step="0.01" value="0.8" oninput="this.nextElementSibling.value=this.value">
+                <output>0.8</output>
+            </div>
+            <div class="slider-container">
+                <label>Alcohol:</label>
+                <input type="range" name="alcohol" min="8" max="15" step="0.1" value="10" oninput="this.nextElementSibling.value=this.value">
+                <output>10</output>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
