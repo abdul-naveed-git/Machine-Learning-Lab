@@ -53,6 +53,19 @@
             background: #ff1e42;
             color: white;
         }
+        .color-legend {
+            margin-top: 30px;
+            font-size: 18px;
+            text-align: left;
+            color: white;
+        }
+        .color-box {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +85,14 @@
         {% endif %}
         <br>
         <a href="/">Try Again</a>
+
+        <!-- Color Legend Section -->
+        <div class="color-legend">
+            <h3>Color Legend:</h3>
+            <p><span class="color-box" style="background-color: red;"></span> Low Quality </p>
+            <p><span class="color-box" style="background-color: yellow;"></span> Medium Quality </p>
+            <p><span class="color-box" style="background-color: green;"></span> High Quality </p>
+        </div>
     </div>
 </body>
 </html>
