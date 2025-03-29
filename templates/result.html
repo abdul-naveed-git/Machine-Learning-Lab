@@ -61,7 +61,7 @@
         {% if prediction %}
             <p>The predicted wine quality score is:</p>
             <div class="result-box 
-                {% if prediction <= 4 %} low-quality 
+                {% if prediction <= 5 %} low-quality 
                 {% elif prediction <= 6 %} medium-quality 
                 {% else %} high-quality 
                 {% endif %}">
