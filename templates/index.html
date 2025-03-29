@@ -6,23 +6,23 @@
     <title>Wine Quality Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        /* Body Background */
+       
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4e73df, #1f8aff); /* Cool Blue Gradient */
+            background: linear-gradient(to right, #4e73df, #1f8aff); 
             color: white;
             text-align: center;
             padding: 20px;
-            animation: fadeIn 2s ease-in-out; /* Animation for body */
+            animation: fadeIn 2s ease-in-out; 
         }
 
-        /* Fade-in animation for body */
+        
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
 
-        /* Container Style */
+       
         .container {
             background: rgba(255, 255, 255, 0.2);
             padding: 20px;
@@ -30,10 +30,10 @@
             width: 50%;
             margin: auto;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            animation: slideUp 1s ease-out; /* Slide-in animation */
+            animation: slideUp 1s ease-out; 
         }
 
-        /* Slide-in animation */
+      
         @keyframes slideUp {
             0% { transform: translateY(100px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
@@ -41,25 +41,25 @@
 
         h2 {
             margin-bottom: 20px;
-            animation: fadeInText 2s ease-in-out; /* Fade-in effect for header */
+            animation: fadeInText 2s ease-in-out; 
         }
 
-        /* Fade-in animation for header */
+      
         @keyframes fadeInText {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
 
-        /* Slider Style */
+        
         .slider-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 15px;
-            animation: slideIn 1s ease-out; /* Animation for sliders */
+            animation: slideIn 1s ease-out; 
         }
 
-        /* Slide-in animation for sliders */
+       
         @keyframes slideIn {
             0% { transform: translateX(-100px); opacity: 0; }
             100% { transform: translateX(0); opacity: 1; }
@@ -84,12 +84,12 @@
             transition: background-color 0.3s;
         }
 
-        /* Hover effect for sliders */
+       
         input[type="range"]:hover::-webkit-slider-thumb {
             background: #1666b3;
         }
 
-        /* Button Style */
+      
         button {
             background: #1f8aff;
             color: white;
@@ -102,7 +102,7 @@
             animation: bounceIn 1s ease-out; /* Bounce-in animation for button */
         }
 
-        /* Bounce-in animation */
+        
         @keyframes bounceIn {
             0% { transform: scale(0); opacity: 0; }
             60% { transform: scale(1.1); }
@@ -113,26 +113,17 @@
             background: #1666b3;
         }
 
-        /* Add image below the form */
+  
         .image-container {
             margin-top: 20px;
             animation: fadeInImage 2s ease-in-out;
         }
 
-        /* Fade-in animation for image */
+   
         @keyframes fadeInImage {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-
-        /* Responsive image */
-        .image-container img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        /* Footer Style */
         footer {
             margin-top: 40px;
             padding: 10px;
@@ -216,13 +207,6 @@
             <button type="submit">Predict</button>
         </form>
     </div>
-
-    <!-- Add Image Section -->
-    <div class="image-container">
-        <img src="https://media.licdn.com/dms/image/v2/D5612AQHwzFJW75X22A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1674384291032?e=2147483647&v=beta&t=IBguDw6af4l1PyaTlV6Rw1YilLGFbUdn2_y178PYdww" alt="Wine Glass Image"> <!-- Replace with a real image URL -->
-    </div>
-
-    <!-- Footer Section for Credits -->
     <footer>
         <p>Created by <strong>Shaik. Abdul Naveed</strong>, 2nd B.Tech, PVPSIT College</p>
     </footer>
