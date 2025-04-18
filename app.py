@@ -1,6 +1,5 @@
 from flask import Flask,request,render_template
 import numpy as np
-import pandas
 import sklearn
 import pickle
 
@@ -26,7 +25,7 @@ def predict():
     rainfall = request.form['Rainfall']
 
     feature_list = [N, P, K, temp, humidity, ph, rainfall]
-    single_pred = np.array(feature_list).reshape(1, -1)
+    single_pred = np.array(feature_list,dtype="float").reshape(1, -1)
 
    
     prediction = model.predict(single_pred)
